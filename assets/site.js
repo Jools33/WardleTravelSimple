@@ -40,7 +40,7 @@ const directionsUrl = (address) =>
 // source can still be read. We store a SHA-256 hash rather than the passcode
 // itself so it is not sitting in plain text. To change it, hash the new
 // passcode (e.g. `echo -n "newcode" | sha256sum`) and paste it here.
-const PASSCODE_SHA256 = "47ddf8876bdd708ca2b69625c9a3cc1de944e3350627fd53db0619075a30b54b";
+const PASSCODE_SHA256 = "ea6dde513590cc54f69da774b646a139f4f07ba5fe6a17b3e9a88cfc5c157c04";
 const GATE_KEY = "wt_unlocked";
 
 async function sha256(text) {
