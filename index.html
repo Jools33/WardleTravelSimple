@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-GB" class="locked">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Wardle Travel | Your local independent travel agency</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css?v=5" />
+    <script src="assets/site.js?v=5"></script>
+  </head>
+  <body>
+    <div id="gate"></div>
+
+    <div id="app">
+      <div id="site-header"></div>
+
+      <main>
+        <!-- Hero: "Book online today" headline, with the booking form overlapping it front and centre -->
+        <section class="hero book-hero">
+          <div class="container">
+            <h1>Book online today</h1>
+            <p class="lead">With your local independent travel agency</p>
+          </div>
+        </section>
+
+        <section class="booking-wrap" id="book">
+          <div class="container">
+            <form class="booking-card" data-demo-form="Online booking is a placeholder in this demo. In the real site this would search live holiday availability and prices.">
+              <div class="booking-grid">
+                <div class="field span-2">
+                  <label for="b-dest">Where would you like to go?</label>
+                  <input id="b-dest" placeholder="Destination, resort or hotel" />
+                </div>
+                <div class="field">
+                  <label for="b-date">Departure date</label>
+                  <input id="b-date" type="date" />
+                </div>
+                <div class="field">
+                  <label for="b-nights">Nights</label>
+                  <select id="b-nights">
+                    <option>3 nights</option>
+                    <option selected>7 nights</option>
+                    <option>10 nights</option>
+                    <option>14 nights</option>
+                  </select>
+                </div>
+                <div class="field span-all">
+                  <label for="b-from">Flying from</label>
+                  <select id="b-from">
+                    <option>Any UK airport</option>
+                    <option>Manchester</option>
+                    <option>Birmingham</option>
+                    <option>East Midlands</option>
+                    <option>Liverpool</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="b-adults">Adults</label>
+                  <select id="b-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+                </div>
+                <div class="field">
+                  <label for="b-kids">Children</label>
+                  <select id="b-kids" data-child-count><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+                </div>
+                <div class="field span-2">
+                  <label for="b-board">Board basis</label>
+                  <select id="b-board"><option>Any</option><option>All inclusive</option><option>Full board</option><option>Half board</option><option>Bed &amp; breakfast</option><option>Self catering</option></select>
+                </div>
+                <!-- Filled with one age picker per child when Children is above 0 -->
+                <fieldset class="child-ages span-all" data-child-ages hidden>
+                  <legend>Children's ages on return</legend>
+                  <div class="child-ages-grid"></div>
+                </fieldset>
+              </div>
+              <div class="booking-actions">
+                <p class="note">Prefer to talk to someone? Call us or <a href="contact.html">visit us in store</a>.<br />Booking is a placeholder in this demo.</p>
+                <button type="submit" class="btn btn-primary">Search holidays</button>
+              </div>
+            </form>
+
+            <!-- "Get all this included" -->
+            <p class="included-head">Get all this included…</p>
+            <div class="grid cols-4">
+              <div class="card inclusion">
+                <div class="icon">🧳</div>
+                <div><strong>22kg hold luggage</strong><span>Included on package holidays</span></div>
+              </div>
+              <div class="card inclusion">
+                <div class="icon">💷</div>
+                <div><strong>£60pp deposit</strong><span>Secure your holiday now, pay the rest later</span></div>
+              </div>
+              <div class="card inclusion">
+                <div class="icon">🚌</div>
+                <div><strong>Transfers included</strong><span>Coach transfers to your hotel*</span></div>
+              </div>
+              <div class="card inclusion">
+                <div class="icon">🛡️</div>
+                <div><strong>ATOL &amp; ABTA</strong><span>Financial protection on package holidays</span></div>
+              </div>
+            </div>
+            <p class="note">*Placeholder. Transfers not included with city breaks.</p>
+          </div>
+        </section>
+
+        <!-- Welcome -->
+        <section class="section">
+          <div class="container split">
+            <div class="ph ph-dusk">👨‍👩‍👧‍👦</div>
+            <div>
+              <span class="kicker">Welcome</span>
+              <h2>Welcome to our family-owned local independent travel agency</h2>
+              <p class="muted">
+                Placeholder copy. We've been helping local people get away for many years, booking package
+                holidays, cruises, city breaks and tours with trusted UK tour operators at competitive prices.
+              </p>
+              <ul class="checklist">
+                <li>Travel documents delivered and explained before you go</li>
+                <li>Help with amendments, extra luggage and seat upgrades</li>
+                <li>Friendly, personal service from start to finish</li>
+              </ul>
+              <p class="muted">Prefer to chat in person? Pop into our store and we'll help you find the perfect holiday.</p>
+              <a href="contact.html" class="btn btn-accent">Contact us</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-white">
+          <div class="container" data-carousel>
+            <div class="row-between">
+              <div class="section-head">
+                <span class="kicker">Testimonials</span>
+                <h2>What our customers say</h2>
+              </div>
+              <div class="carousel-controls">
+                <button class="icon-btn" data-prev aria-label="Previous reviews">←</button>
+                <button class="icon-btn" data-next aria-label="Next reviews">→</button>
+              </div>
+            </div>
+            <div class="reviews">
+              <article class="card review">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Placeholder review. Lovely personal service from start to finish. We've booked with them every year and wouldn't go anywhere else."</blockquote>
+                <div class="review-author"><span class="avatar">S</span><div><strong>Sarah T.</strong><span>Placeholder</span></div></div>
+              </article>
+              <article class="card review">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Placeholder review. Found us a fantastic deal and sorted our extra luggage with no fuss at all."</blockquote>
+                <div class="review-author"><span class="avatar" style="background:var(--brand-500)">M</span><div><strong>Mark &amp; Jean P.</strong><span>Placeholder</span></div></div>
+              </article>
+              <article class="card review">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Placeholder review. Friendly, knowledgeable and always there to help. Our documents arrived in good time with everything explained."</blockquote>
+                <div class="review-author"><span class="avatar" style="background:var(--brand-400)">D</span><div><strong>David R.</strong><span>Placeholder</span></div></div>
+              </article>
+              <article class="card review">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Placeholder review. Planned our cruise perfectly. So much easier than trying to book it all online ourselves."</blockquote>
+                <div class="review-author"><span class="avatar" style="background:var(--accent-700)">L</span><div><strong>Laura &amp; Tom</strong><span>Placeholder</span></div></div>
+              </article>
+              <article class="card review">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Placeholder review. Always a warm welcome in the shop. Highly recommend to friends and family."</blockquote>
+                <div class="review-author"><span class="avatar" style="background:var(--brand-700)">K</span><div><strong>Karen W.</strong><span>Placeholder</span></div></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section">
+          <div class="container split" style="align-items:start">
+            <div>
+              <span class="kicker">Contact</span>
+              <h2>Visit us in store</h2>
+              <p class="muted">Placeholder copy. Book in store with our friendly team, or give us a call and we'll be happy to help.</p>
+              <div class="card" data-hours style="margin-top:1.25rem"></div>
+            </div>
+            <div data-branch data-branch-link></div>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </body>
+</html>
