@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/styles.css?v=5" />
-    <script src="assets/site.js?v=5"></script>
+    <link rel="stylesheet" href="assets/styles.css?v=1" />
+    <script src="assets/site.js?v=1"></script>
   </head>
   <body>
     <div id="gate"></div>
@@ -23,11 +23,12 @@
           <div class="container">
             <div class="crumbs"><a href="index.html">Home</a> / Contact us</div>
             <h1>Contact us</h1>
-            <p>Placeholder copy. Book in store at our branch below, give us a call or send us a message.</p>
+            <p>Call, WhatsApp, send us a message or pop into the store. Whichever suits you, you'll speak to a real person.</p>
           </div>
         </section>
         <section class="section">
           <div class="container">
+            <div class="contact-options" data-contact-options style="margin-bottom:1.25rem"></div>
             <div class="grid cols-2" style="align-items:start">
               <div data-branch></div>
               <div class="card">
@@ -41,24 +42,14 @@
           </div>
         </section>
 
-        <section class="section section-white" id="enquiry">
+        <section class="section section-white" id="message">
           <div class="container" style="max-width:760px">
             <div class="section-head center">
-              <span class="kicker">Enquiries</span>
-              <h2>Got a question?</h2>
-              <p>Send us a message and one of the team will get back to you.</p>
+              <span class="kicker">Send us a message</span>
+              <h2>Tell us what you're looking for</h2>
+              <p>We'll write the message for you to send by email or WhatsApp, and one of the team will get back to you.</p>
             </div>
-            <form class="card" data-demo-form="Thanks! In the real site this message would be sent to the Wardle Travel team. This form is a placeholder.">
-              <div class="grid-2">
-                <div class="field"><label for="c-name">Name</label><input id="c-name" required /></div>
-                <div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" /></div>
-              </div>
-              <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" required /></div>
-              <div class="field"><label for="c-address">Address</label><input id="c-address" /></div>
-              <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="5"></textarea></div>
-              <button class="btn btn-primary btn-block">Send</button>
-              <p class="note">This form is a placeholder and doesn't send anything.</p>
-            </form>
+            <div data-enquiry></div>
           </div>
         </section>
       </main>

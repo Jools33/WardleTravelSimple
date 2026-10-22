@@ -937,18 +937,18 @@ details p { margin: 0.75rem 0 0; color: var(--slate-500); font-size: 0.95rem; }
 .mb-0 { margin-bottom: 0; }
 .center { text-align: center; }
 
-/* ---------- Booking-first hero (Wonderling-style) ---------- */
+/* ---------- Contact-first hero ---------- */
 
-.book-hero .container {
+.contact-hero .container {
   display: block;
   text-align: center;
   padding-top: 3.5rem;
   padding-bottom: 7rem;
 }
 
-.book-hero h1 { text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 0.25rem; }
+.contact-hero h1 { text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 0.25rem; }
 
-.book-hero .lead {
+.contact-hero .lead {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -956,70 +956,10 @@ details p { margin: 0.75rem 0 0; color: var(--slate-500); font-size: 0.95rem; }
   font-size: 0.95rem;
 }
 
-.booking-wrap {
+.contact-wrap {
   position: relative;
   z-index: 2;
   margin-top: -5rem;
-}
-
-.booking-card {
-  max-width: 960px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid var(--warm-200);
-  border-radius: var(--radius-3xl);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-lg);
-}
-
-.booking-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0 0.75rem;
-}
-
-.booking-grid .span-2 { grid-column: span 2; }
-.booking-grid .span-all { grid-column: 1 / -1; }
-
-.child-ages {
-  border: 1px dashed var(--brand-200);
-  background: var(--brand-50);
-  border-radius: var(--radius-xl);
-  padding: 0.75rem 1rem 0.25rem;
-  margin: 0 0 1rem;
-  min-width: 0;
-}
-
-.child-ages[hidden] { display: none; }
-
-.child-ages legend {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--brand-700);
-  padding: 0 0.35rem;
-}
-
-.child-ages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 0.75rem; }
-
-.booking-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1.5rem;
-  margin-top: 0.25rem;
-}
-
-.booking-actions .note { margin: 0; text-align: left; }
-
-@media (max-width: 860px) {
-  .booking-grid { grid-template-columns: 1fr 1fr; }
-  .child-ages-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 520px) {
-  .booking-card { padding: 1.25rem; }
-  .booking-actions .btn { width: 100%; }
 }
 
 .included-head {
@@ -1028,6 +968,119 @@ details p { margin: 0.75rem 0 0; color: var(--slate-500); font-size: 0.95rem; }
   color: var(--slate-800);
   font-size: 1.1rem;
   margin: 2.5rem 0 1.25rem;
+}
+
+/* Four ways to get in touch */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.contact-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--slate-700);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-option:hover { transform: translateY(-3px); border-color: var(--brand-200); color: var(--slate-700); }
+.contact-option .icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  background: var(--brand-50);
+  margin-bottom: 0.4rem;
+}
+.contact-option strong { color: var(--slate-800); font-size: 1.1rem; }
+.contact-option .text { font-size: 0.88rem; color: var(--slate-500); flex: 1; }
+.contact-option .cta { font-weight: 700; color: var(--brand-600); font-size: 0.9rem; margin-top: 0.4rem; }
+
+@media (max-width: 900px) {
+  .contact-options { grid-template-columns: 1fr 1fr; }
+}
+
+/* How it works */
+.how-step .num {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--brand-500);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+.how-step p { color: var(--slate-500); font-size: 0.95rem; margin: 0; }
+
+/* Message template builder */
+.enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+.enquiry-grid .span-all { grid-column: 1 / -1; }
+.enquiry-card .label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--slate-700); margin-bottom: 0.4rem; }
+.radio-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--warm-300);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--slate-700);
+}
+.radio-row label:has(input:checked) { border-color: var(--brand-500); background: var(--brand-50); color: var(--brand-700); }
+.radio-row input { width: auto; height: auto; margin: 0; accent-color: var(--brand-500); }
+.enquiry-card .preview textarea { background: var(--accent-50); border-color: var(--accent-200); font-size: 0.9rem; line-height: 1.5; }
+.enquiry-actions { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.6rem; }
+
+@media (max-width: 640px) {
+  .enquiry-grid { grid-template-columns: 1fr; }
+  .enquiry-actions { grid-template-columns: 1fr; }
+}
+
+/* Sticky contact bar on phones */
+.contact-bar { display: none; }
+
+@media (max-width: 700px) {
+  .contact-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    background: #fff;
+    border-top: 1px solid var(--warm-200);
+    box-shadow: 0 -6px 20px -8px rgb(15 23 42 / 0.2);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .contact-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding: 0.55rem 0 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--slate-700);
+  }
+  .contact-bar a:first-child { background: var(--brand-500); color: #fff; }
+  .contact-bar span { font-size: 1.15rem; line-height: 1.2; }
+  html:not(.locked) body { padding-bottom: 3.75rem; }
+  .topbar-wa { display: none; }
 }
 
 /* Opening hours table */
@@ -1060,20 +1113,26 @@ details p { margin: 0.75rem 0 0; color: var(--slate-500); font-size: 0.95rem; }
   .site-header .container { height: 3.75rem; }
   .logo-mark { width: 2.2rem; height: 2.2rem; font-size: 1.1rem; }
 
-  .book-hero .container { padding-top: 2rem; padding-bottom: 5rem; }
-  .book-hero h1 { font-size: 1.7rem; }
-  .book-hero .lead { font-size: 0.75rem; }
-  .booking-wrap { margin-top: -3.75rem; }
-  .booking-card { border-radius: var(--radius-2xl); }
+  .contact-hero .container { padding-top: 2rem; padding-bottom: 5rem; }
+  .contact-hero h1 { font-size: 1.6rem; }
+  .contact-hero .lead { font-size: 0.75rem; }
+  .contact-wrap { margin-top: -3.75rem; }
   .field { margin-bottom: 0.75rem; }
+
+  .contact-options { gap: 0.6rem; }
+  .contact-option { padding: 0.95rem; box-shadow: var(--shadow-md); }
+  .contact-option .icon { width: 2.4rem; height: 2.4rem; font-size: 1.15rem; border-radius: 0.75rem; }
+  .contact-option strong { font-size: 0.95rem; }
+  .contact-option .text { font-size: 0.78rem; line-height: 1.4; }
+  .contact-option .cta { font-size: 0.8rem; }
 
   /* Inclusions become a compact 2x2 grid */
   .included-head { margin: 1.75rem 0 0.9rem; font-size: 1rem; }
-  .booking-wrap .grid.cols-4 { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .booking-wrap .inclusion { flex-direction: column; gap: 0.5rem; padding: 0.9rem; }
-  .booking-wrap .inclusion .icon { width: 2.25rem; height: 2.25rem; font-size: 1.1rem; border-radius: 0.7rem; }
-  .booking-wrap .inclusion strong { font-size: 0.88rem; }
-  .booking-wrap .inclusion span { font-size: 0.76rem; line-height: 1.4; display: block; }
+  .contact-wrap .grid.cols-4 { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .contact-wrap .inclusion { flex-direction: column; gap: 0.5rem; padding: 0.9rem; }
+  .contact-wrap .inclusion .icon { width: 2.25rem; height: 2.25rem; font-size: 1.1rem; border-radius: 0.7rem; }
+  .contact-wrap .inclusion strong { font-size: 0.88rem; }
+  .contact-wrap .inclusion span { font-size: 0.76rem; line-height: 1.4; display: block; }
 
   /* Decorative placeholder images shrink to a slim banner */
   .split { gap: 1.25rem; }

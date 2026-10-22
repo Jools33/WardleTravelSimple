@@ -1,18 +1,22 @@
-# Wardle Travel demo site
+# Wardle Travel demo site (contact-first)
 
-A static, placeholder-content demo of the Wardle Travel website for stakeholder review. Styling (colours, Inter font, rounded cards) is borrowed from Wardle Compass; layout follows wonderlingtravel.co.uk.
+A static, placeholder-content demo of the Wardle Travel website for stakeholder review. This is the simple version of [WardleTravel](https://github.com/Jools33/WardleTravel): there is no online booking. Instead every page points customers to the store by phone, WhatsApp, a ready-written message, or a visit, so there is no booking integration to pay for. Styling (colours, Inter font, rounded cards) is borrowed from Wardle Compass; layout follows wonderlingtravel.co.uk.
 
 There's no build step: plain HTML, CSS and JavaScript, so it runs as-is on GitHub Pages.
 
 ## Pages
 
-The format follows wonderlingtravel.co.uk: booking first, then contact and about.
+- `index.html` – home: "Talk to us" hero with four contact options front and centre (call, WhatsApp, message, visit), why use a local agent, how it works, the message template, welcome, testimonials, visit us
+- `about.html` – who we are, team, call or message
+- `contact.html` – contact options, branch details, opening hours, map placeholder, message template
 
-- `index.html` – home: "Book online today" hero with the booking form front and centre, what's included, welcome, testimonials, visit us
-- `about.html` – who we are, team, ready to book
-- `contact.html` – branch details, opening hours, map placeholder, enquiry form
+On phones a bar fixed to the bottom of the screen offers Call, WhatsApp, Message and Directions on every page.
 
-The booking form, enquiry form and social links are placeholders that show a "coming soon" message.
+## Message template
+
+The "Send us a message" form doesn't need a server. Customers fill in where, when, who's going and so on, and the page writes a tidy enquiry for them. They can edit it, then press "Send by email" (opens their email app via `mailto:`), "Send on WhatsApp" (opens `wa.me` with the text filled in) or copy it. Nothing is sent until they press send in their own app.
+
+Social links are placeholders that show a "coming soon" message.
 
 ## Passcode
 
@@ -26,7 +30,7 @@ echo -n "new-passcode" | sha256sum
 
 ## Business details
 
-Branch names, addresses and phone numbers live in `BUSINESS` at the top of `assets/site.js`. They are placeholders for now (phone numbers use the Ofcom 01632 960xxx range reserved for fiction); swap in the real details once confirmed.
+Branch name, address, phone, WhatsApp number and email live in `BUSINESS` at the top of `assets/site.js`. They are placeholders for now (phone numbers use the Ofcom 01632 960xxx range reserved for fiction); swap in the real details once confirmed. WhatsApp uses the same number as the phone so customers only need one; the WhatsApp links won't work until it's a real WhatsApp Business number.
 
 ## Caching
 
